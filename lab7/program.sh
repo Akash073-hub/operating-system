@@ -7,10 +7,8 @@ echo ""
 monitor_memory_usage() {
 echo "Monitoring memory usage in real-time. Press [CTRL+C] to stop."
 top -o %MEM
-while true;do
-    top -o %MEM >> memory_log.txt
-    cat memory_log.txt
-done
+top -o %MEM >> memory_log.txt
+sleep 10
 }
 
 echo "Dynamic Memory Monitor"
